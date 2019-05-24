@@ -146,6 +146,10 @@ a {
   /* Restrict the maximum width of the .main-block to 1200px,
   then ensure that block is centered within the layout */
   /* Hint: how do you center a block element? */
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
 }
 
 .main-section {
@@ -217,12 +221,28 @@ a {
     /* Use this as a reminder of the syntax:
       https://codepen.io/roccop/pen/WLQJXY?editors=1100
     */
+    grid-template-columns: 1fr 1fr; 
+
     /* TODO 5 */
     /* set a grid-gap of 1em 
     and make sure to remove the margin on each .lesson
     to get an evenly spaced layout. */
+
+    grid-gap: 1em;
   }
 
+.main-header {
+  grid-column: 1 / span 2;
+}
+
+.lesson {
+  margin: 0;
+}
+
+.lessons {
+  margin: 0;
+  grid-column: 1 / span 2;
+  }
 }
 
 
@@ -247,6 +267,9 @@ a {
   .lessons-grid {
     /* TODO 2 */
     /* 4 column template! (1 fraction each) */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   /* TODO 4 */
